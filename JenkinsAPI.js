@@ -1,4 +1,5 @@
-exports.connectJenkins = function (username, password) {
+
+exports.connectJenkins = function () {
 // username/password
     var jenkinsapi = require('jenkins-api');
     var jenkins = jenkinsapi.init("http://admin:de713ff17ffd4bdfb3fee76eb6718942@jenkins.yoursite.com");
@@ -18,7 +19,10 @@ exports.stopBuild = function(jenkins,jobID, buildID){
         console.log(data)
     });
 };
-
+exports.all_jobs((optional){token: 'jenkins-token', ...}, function(err, data) {
+    if (err){ return console.log(err); }
+    console.log(data)
+});
 
 /*Some functions we may use*/
 /*

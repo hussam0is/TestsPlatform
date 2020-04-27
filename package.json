@@ -2,6 +2,7 @@
   "name": "JenkinsTest1",
   "version": "1.0.0",
   "dependencies": {
-    "jenkins-api": "latest"
+    "jenkins": "^0.28.0",
+    "jenkins-api": "^0.3.1"
   }
 }
