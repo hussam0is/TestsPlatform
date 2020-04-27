@@ -29,18 +29,14 @@ jenkins.info(function(err, data) {
     // console output:
 
 });
-/*
-jenkins.build.log("Hello world 2", 5, function(err, data) {
-    if (err) throw err;
-
-    console.log('log', data);
-});*/
 
 jenkins.job.build("Hello world 2", function(err, data) {
     console.log("build job:")
     if (err) throw err;
     console.log('queue item number', data);
 });
+//some functions we may use:
+/*
 // delete job
 jenkins.job.destroy('example', function(err) {
     if (err) throw err;
@@ -58,7 +54,7 @@ jenkins.job.exists('example', function(err, exists) {
     if (err) throw err;
 
     console.log('exists', exists);
-});
+});*/
 
 /*
 
