@@ -1,0 +1,16 @@
+[
+  {
+    "build_id": 23,
+    "status": 1,
+    "result": "28/50",
+    "date": "28/03/2020",
+    "start_time": "10:45:44"
+  },
+  {
+    "build_id": 24,
+    "status": 3,
+    "result": "12/40",
+    "date": "29/03/2020",
+    "start_time": "11:30:12"
+  }
+]
