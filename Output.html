@@ -5,8 +5,21 @@
 </head>
 <p id="demo"></p>
 <body>
-<script>
-    document.getElementById("demo").innerHTML = "Hello World!";
+<script type="module" src='./JenkinsFunctions.js'></script>
+<script type="text/javascript" src="./require.js"></script>
+<script type="text/javascript">
+
+   //import {connectJenkinsUser as cj, getExistedJobsData as ge} from './JenkinsFunctions';
+   //const jenkinsModule = require('./JenkinsFunctions');
+   const jenkinsModule = require('./JenkinsFunctions');
+   const user_jobs = {};
+   const username1 = 'admin';
+   const password = 'de713ff17ffd4bdfb3fee76eb6718942';
+   const jobs = {};
+   let jenkinsUser1 = jenkinsModule.connectJenkinsUser(username1, password);
+   new Promise((resolve, reject) => jenkinsModule.getExistedJobsData(jenkinsUser1,user_jobs, function (jobs) {
+      resolve(jobs);
+   })).then(jobs=> {document.getElementById("demo").innerHTML = jobs.toString()})
 </script>
 </body>
 </html>
