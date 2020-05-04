@@ -71,6 +71,24 @@ const allDataPromise = new Promise((resolve, reject)=>{
         })
     })
 })
+var axios = require("axios");
+
+var url = 'http://localhost:8080/job/'+jobName+'/lastBuild/api/json?tree=timestamp';
+/*
+async function getData(url) {
+    try {
+        /!*{url:url, method:'get',baseURL:'http://localhost:8080/',
+            transforRequest: [function (data, headers) {return data}], transformResponse: [function (data) { return data;
+            }],})*!/
+        var response = await axios({url:url,proxy:{auth:{username:username1,password:password}}})
+        var data = response.data;
+        console.log(data);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+getData(url);*/
 
    /* getJSON('http://localhost:8080/job/'+jobName+'/lastBuild/api/json?tree=timestamp', // getting timestamp did not success
         function(err, data) {
