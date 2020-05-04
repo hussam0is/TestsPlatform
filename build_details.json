@@ -1,0 +1,20 @@
+{
+  "build_id": 23,
+  "status": 1,
+  "result": "28/50",
+  "date": "28/03/2020",
+  "start_time": "10:45:44",
+  "build_name" : "Test 23",
+  "tests": [
+    {
+      "test_id": 1,
+      "test_case": "bla",
+      "test_title": "o1-o2"
+    },
+    {
+      "test_id": 2,
+      "test_case": "alb",
+      "test_title": "o3-o42"
+    }
+  ]
+}
