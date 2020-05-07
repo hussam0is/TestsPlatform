@@ -1,20 +1,29 @@
 {
   "build_id": 23,
-  "status": 1,
+  "build_name" : "Test 23",
+  "jenkins_job_number": 2,
+  "status" : 1,
   "result": "28/50",
+  "running_environment": "Trunk",
   "date": "28/03/2020",
   "start_time": "10:45:44",
-  "build_name" : "Test 23",
+  "run_duration": "00:16:23",
+  "reported_to": "",
+  "zoho_issue_link":"",
   "tests": [
     {
       "test_id": 1,
       "test_case": "bla",
-      "test_title": "o1-o2"
+      "test_title": "o1-o2",
+      "category": "Integration test",
+      "test_result": 1
     },
     {
       "test_id": 2,
       "test_case": "alb",
-      "test_title": "o3-o42"
+      "test_title": "o3-o42",
+      "category": "Integration test",
+      "test_result": 2
     }
   ]
 }
