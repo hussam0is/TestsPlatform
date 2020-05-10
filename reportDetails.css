@@ -1,0 +1,29 @@
+h1 {
+    position: relative;;
+    font-size: 45px;
+    font-family: inherit;
+    color: midnightblue;
+    font-style: italic;
+    font-weight: inherit;
+    font-variant: inherit;
+    font-display: inherit;
+    text-align: center;
+}
+
+h3 {
+    color: #0D4C7F;
+    font-size: 30px;
+    font-weight: 400;
+    font-style:normal;
+    font-family: "Roboto", helvetica, arial, sans-serif;
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 1);
+    text-transform:uppercase;
+}
+
+label{
+    color: black;
+  padding: 16px;
+  font-size: 20px;
+  font-weight: bolder;
+  margin-left: 35px;
+}

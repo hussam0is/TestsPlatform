@@ -1,5 +1,5 @@
 {
-  "name": "JenkinsTest1",
+  "name": "jenkinsbuildreports",
   "version": "1.0.0",
   "description": "",
   "main": "send_build_report.js",

@@ -37,30 +37,51 @@ function title() {
 
 function title2() {
     return "<img src=\"cid:logo\" style='display: block; width: 50%;  margin-left: auto; margin-right: auto'/>" +
-        "<h3 dir=ltr style='text-align: left'>Build details : </h3><br>";
+        "<h3 dir=ltr style='text-align: left'>Build result:</h3>";
 }
 
 
 function jsonToHtml(_data) {
-    var style = fs.readFileSync('reportDetails.css', 'utf8');
+    var style = fs.readFileSync('allTests.css', 'utf8');
     var template = fs.readFileSync('template.html', 'utf8');
-    const build = JSON.parse(_data);
-    var output ="<ul dir=ltr>" +
-        " <li>Build_Id: " + build.build_id + "</li><br>" +
-        " <li>Result</li><br>" +
-        " <li>Status</li><br>" +
-        " <li>Date</li><br>" +
-        " <li>Start Time</li><br>" +
-        " <li>Name</li><br>" +
+    const build = JSON.parse(_data)
+    var output1 ="<ul dir=ltr>" +
+        "<li><b>Build Id:</b> " + build.build_id + "</li><br>" +
+        "<li><b>Build Name:</b> " + build.build_name + "</li><br>" +
+        "<li><b>Jenkins Job Number:</b> " + build.jenkins_job_number + "</li><br>" +
+        "<li><b>Status:</b> " + build.status + "</li><br>" +
+        "<li><b>Result:</b> " + build.result + "</li><br>" +
+        "<li><b>Running Environment:</b> " + build.running_environment + "</li><br>" +
+        "<li><b>Date:</b> " + build.date + "</li><br>" +
+        "<li><b>Start Time:</b> " + build.start_time + "</li><br>" +
+        "<li><b>Run Duration:</b> " + build.run_duration + "</li><br>" +
+        "<li><b>Reported To:</b> " + build.reported_to + "</li><br>" +
+        "<li><b>Zoho Issue Link:</b> " + build.zoho_issue_link + "</li><br>" +
         "</ul>";
-    output += build.build_id;
-    output += build.build_name;
-    output += build.result;
-    output += "<style=\"" + getStatusColor(build.status) + "\">" + convertStatus(build.status);
-    output += build.date;
-    output += build.start_time;
-    output += build.build_name;
-    return template.replace('#css#', style).replace('#body#', output)
+
+    let th = '<th class="text-left">'
+    let output ="<h3>Build consists of the following tests:</h3><br>"
+    output += '<table border="1" style="width:100%" dir=ltr class="table-fill">' +
+        "<tr>" +
+        th + "Test Id</th>" +
+        th + "Test Case</th>" +
+        th + "Test Title</th>" +
+        th + "Category</th>" +
+        th + "Test Result</th>" +
+        "</tr>";
+
+    build.tests.sort((build1, build2) => build1.test_id - build2.test_id);
+    build.tests.forEach(build =>{
+        output += "<tr>"
+        output += '<td class="text-left">' + build.test_id + "</td>";
+        output += '<td class="text-left">' + build.test_case + "</td>";
+        output += '<td class="text-left">' + build.test_title + "</td>";
+        output += '<td class="text-left">' + build.category + "</td>";
+        output += "<td style=\"" + getStatusColor(build.test_result) + "\">" + convertStatus(build.test_result) + "</td>";
+        output += "</tr>\n";
+    })
+    output += "</table>";
+    return template.replace('#css#', style).replace('#body#', output1 + output)
 }
 
 function jsonListToHtml(_data) {
