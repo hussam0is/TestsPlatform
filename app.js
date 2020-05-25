@@ -8,7 +8,7 @@ recipients = ['avil2101@gmail.com'];
 
 // if your jenkins call is async then call this function after you received the result from jenkins
 // for example: jenkins.getAllBuilds((builds) => sendEmail.sendEmailAllBuilds(recipients, builds))
-//sendEmail.sendEmailAllBuilds(recipients, fs.readFileSync('all_build_report.json', 'utf8'))
+sendEmail.sendEmailAllBuilds(recipients, fs.readFileSync('all_build_report.json', 'utf8'))
 sendEmail.sendBuildDetails(recipients, fs.readFileSync('build_details.json', 'utf8'));
 
 //synchronously (blocking)

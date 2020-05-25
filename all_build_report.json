@@ -1,18 +1,68 @@
-[
-  {
-    "build_id": 23,
-    "build_name" : "test 1",
-    "status": 1,
-    "result": "28/50",
-    "date": "28/03/2020",
-    "start_time": "10:45:44"
-  },
-  {
-    "build_id": 14,
-    "build_name" : "test 2",
-    "status": 3,
-    "result": "12/40",
-    "date": "29/03/2020",
-    "start_time": "11:30:12"
-  }
-]
+{
+  "last_builds" : [
+    {
+      "success_build_id": 15,
+      "failure_build_id": 338,
+      "last_success_duration" : 185,
+      "last_failure_duration" : 154,
+      "last_build_duration" : 884,
+      "build_name": "master-client",
+      "build_name_url": "https://wiki.jenkins.io/download/attachments/59511434/build-metrics-results.png?version=1&modificationDate=1329430974000&api=v2",
+      "success_build_id_url": "https://wiki.jenkins.io/download/attachments/59511434/build-metrics-results.png?version=1&modificationDate=1329430974000&api=v2",
+      "failure_build_id_url": "https://wiki.jenkins.io/download/attachments/59511434/build-metrics-results.png?version=1&modificationDate=1329430974000&api=v2"
+    },
+    {
+      "success_build_id": 122,
+      "failure_build_id": 32,
+      "last_success_duration" : 125,
+      "last_failure_duration" : 254,
+      "last_build_duration" : 784,
+      "build_name": "trunk",
+      "build_name_url": "https://wiki.jenkins.io/download/attachments/59511434/build-metrics-results.png?version=1&modificationDate=1329430974000&api=v2",
+      "success_build_id_url": "https://wiki.jenkins.io/download/attachments/59511434/build-metrics-results.png?version=1&modificationDate=1329430974000&api=v2",
+      "failure_build_id_url": "https://wiki.jenkins.io/download/attachments/59511434/build-metrics-results.png?version=1&modificationDate=1329430974000&api=v2"
+    }
+  ],
+  "all_builds": [
+    {
+      "build_id": 122,
+      "build_name": "master-client",
+      "build_name_url": "https://wiki.jenkins.io/download/attachments/59511434/build-metrics-results.png?version=1&modificationDate=1329430974000&api=v2",
+      "build_id_url": "https://wiki.jenkins.io/download/attachments/59511434/build-metrics-results.png?version=1&modificationDate=1329430974000&api=v2",
+      "status": 3,
+      "result": "28/50",
+      "date": "5/03/2020",
+      "start_time": "10:45:44"
+    },
+    {
+      "build_id": 253,
+      "build_name": "trunk",
+      "build_name_url": "https://wiki.jenkins.io/download/attachments/59511434/build-metrics-results.png?version=1&modificationDate=1329430974000&api=v2",
+      "build_id_url": "https://wiki.jenkins.io/download/attachments/59511434/build-metrics-results.png?version=1&modificationDate=1329430974000&api=v2",
+      "status": 3,
+      "result": "28/50",
+      "date": "28/04/2020",
+      "start_time": "10:45:44"
+    },
+    {
+      "build_id": 23,
+      "build_name": "master-client",
+      "build_name_url": "https://wiki.jenkins.io/download/attachments/59511434/build-metrics-results.png?version=1&modificationDate=1329430974000&api=v2",
+      "build_id_url": "https://wiki.jenkins.io/download/attachments/59511434/build-metrics-results.png?version=1&modificationDate=1329430974000&api=v2",
+      "status": 3,
+      "result": "28/50",
+      "date": "20/03/2020",
+      "start_time": "10:45:44"
+    },
+    {
+      "build_id": 711,
+      "build_name": "master-client",
+      "build_name_url": "https://wiki.jenkins.io/download/attachments/59511434/build-metrics-results.png?version=1&modificationDate=1329430974000&api=v2",
+      "build_id_url": "https://wiki.jenkins.io/download/attachments/59511434/build-metrics-results.png?version=1&modificationDate=1329430974000&api=v2",
+      "status": 4,
+      "result": "28/50",
+      "date": "20/05/2020",
+      "start_time": "8:45:44"
+    }
+  ]
+}

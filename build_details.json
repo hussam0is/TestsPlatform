@@ -2,7 +2,7 @@
   "build_id": 23,
   "build_name" : "Test 23",
   "jenkins_job_number": 2,
-  "status" : 1,
+  "status" : 3,
   "result": "28/50",
   "running_environment": "Trunk",
   "date": "28/03/2020",
@@ -13,6 +13,7 @@
   "tests": [
     {
       "test_id": 1,
+      "test_id_link" : "https://wiki.jenkins.io/download/attachments/59511434/build-metrics-results.png?version=1&modificationDate=1329430974000&api=v2",
       "test_case": "bla",
       "test_title": "o1-o2",
       "category": "Integration test",
@@ -20,6 +21,7 @@
     },
     {
       "test_id": 13,
+      "test_id_link" : "https://wiki.jenkins.io/download/attachments/59511434/build-metrics-results.png?version=1&modificationDate=1329430974000&api=v2",
       "test_case": "bla",
       "test_title": "o1-o2",
       "category": "Integration test",
