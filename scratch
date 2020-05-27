@@ -1,0 +1,68 @@
+var test_result =  {
+    _class: 'hudson.tasks.junit.TestResult',
+        testActions: [],
+        duration: 0.005,
+        empty: false,
+        failCount: 0,
+        passCount: 4,
+        skipCount: 0,
+        suites: [
+        {
+            cases: [Array],
+            duration: 0.005,
+            enclosingBlockNames: [],
+            enclosingBlocks: [],
+            id: null,
+            name: 'Mocha Tests',
+            nodeId: null,
+            stderr: null,
+            stdout: null,
+            timestamp: 'Wed, 27 May 2020 15:35:33 GMT'
+        }
+    ]
+}
+let build_info = {
+    _class: 'hudson.model.FreeStyleBuild',
+        actions: [
+    { _class: 'hudson.model.CauseAction', causes: [Array] },
+    {},
+    {
+        _class: 'hudson.plugins.git.util.BuildData',
+        buildsByBranchName: [Object],
+        lastBuiltRevision: [Object],
+        remoteUrls: [Array],
+        scmName: ''
+    },
+    { _class: 'hudson.plugins.git.GitTagAction' },
+    {},
+    {},
+    {}
+],
+    artifacts: [],
+    building: false,
+    description: null,
+    displayName: '#22',
+    duration: 2816,
+    estimatedDuration: 5149,
+    executor: null,
+    fullDisplayName: 'Hello world 2 #22',
+    id: '22',
+    keepLog: false,
+    number: 22,
+    queueId: 13,
+    result: 'SUCCESS',
+    timestamp: 1589642461508,
+    url: 'http://localhost:8080/job/Hello%20world%202/22/',
+    builtOn: '',
+    changeSet: {
+    _class: 'hudson.plugins.git.GitChangeSetList',
+        items: [ [Object] ],
+        kind: 'git'
+},
+    culprits: [
+        {
+            absoluteUrl: 'http://localhost:8080/user/hussam.is',
+            fullName: 'hussam.is'
+        }
+    ]
+}
