@@ -1,22 +1,24 @@
-var jenkinsapi = require('jenkins-api');
-const jenkinsAPI = require('./jenkins_API');
+const jenkinsAPI = require('jenkins-api');
 const username = 'admin';
-const password = 'de713ff17ffd4bdfb3fee76eb6718942';
+const password = '************';
+const token = '11198feb1a0d516c53113b7b5966db23a4'
 
-function connectJenkinsUser(username, password) {
+function connectJenkinsUser(username, token) {
     return require('jenkins')({
-        baseUrl: 'http://' + username + ':' + password + '@localhost:8080',
+        baseUrl: 'http://' + username + ':' + token + '@localhost:8080',
         crumbIssuer: true
     })
 }
 
-let jenkinsUser1 = connectJenkinsUser(username, password);
-let jenkinsUser2 = jenkinsapi.init("http://" + username + ":" + password + "@localhost:8080");
+let jenkinsUser1 = connectJenkinsUser(username, token);
+let jenkinsUser2 = jenkinsAPI.init("http://" + username + ":" + token + "@localhost:8080");
+exports.jenkinsUser2 = jenkinsUser2
+exports.jenkinsUser1 = jenkinsUser1
 //console.log(jenkinsUser1)
-console.log(jenkinsUser2) // all functions in the api
+//console.log(jenkinsUser2) // all functions in the api
 
 
-exports.get_builds_in_job = function (jobName) {
+exports.get_builds_and_tests = function (jobName) {
     return new Promise((resolve, reject) => {
         jenkinsUser1.job.get(jobName, function (err, data) {
             if (err) {
@@ -32,7 +34,7 @@ exports.get_builds_in_job = function (jobName) {
                 jobList = jobList.slice(jobList.length - 100, jobList.length)
             }
             jobList = jobList.reverse()
-            console.log("got the latest #" + jobList.length + " builds in job " + '\'' + jobName + '\'.')
+            console.log("got the latest #" + jobList.length + " builds and tests in job " + '\'' + jobName + '\'.')
             resolve(jobList);
         });
     }).catch(err => {
@@ -60,12 +62,13 @@ exports.getConsoleOutput = function (jobName, buildNumber) {
             if (err) {
                 reject(err)
                 throw err;
+                return
             }
             resolve(data)
         });
     }).catch(err => {
         console.log(err)
-        console.log("error getting data from build.log at jenkins_API.js")
+        console.log("error getting data from build.log at jenkins_handling.js")
     })
 }
 exports.getConfigXML = function (jobName) {
@@ -79,14 +82,15 @@ exports.getConfigXML = function (jobName) {
     }).catch(err => console.log(err))
 }
 
-exports.test_result = function (jobName, buildId) {
+exports.test_result = function (jobName, Id) {
     return new Promise((resolve, reject) => {
-        jenkinsUser2.test_result(jobName, buildId, function (err, data) {
+        jenkinsUser2.test_result(jobName, Id, function (err, data) {
             if (err) {
                 // console.log(err)
-                resolve("not-a-test");
+                resolve(false);
+                return
             }
-            resolve(data)
+            resolve(true)
         });
     })
 }
@@ -100,4 +104,17 @@ exports.buildInfo = function (jobName, buildId) {
             resolve(data)
         })
     })
+}
+
+exports.deleteBuild = function (jobName, buildId) {
+return new Promise((resolve, reject) => {
+    jenkinsUser2.delete_build(jobName, buildId,function (err, data) {
+        if (err){
+            console.log("Failed to delete build number: "+buildId+", in job: "+jobName)
+            return reject(err)
+        }
+        console.log("Successfully deleted build number: "+buildId+", in job: "+jobName)
+        resolve(data)
+    })
+}).catch(err=> console.log(err))
 }

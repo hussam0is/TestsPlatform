@@ -1,16 +1,23 @@
-const {Job}= require('./job.js')
+const {Job} = require('./Job.js')
 
-var start = new Date()
+const start = new Date();
 
 async function foo() {
     let jobName = "Hello world 2"
     let job = new Job(jobName, 'www.ws.com');
-    await job.getData();
-    console.log(job);
-    console.log("test result: ", job.builds[99].test_result)
+    await job.updateData();
+    job.showBuilds()
+    job.showTests()
+    await job.deleteFirstNBuilds(20)
+    job.showBuilds()
+    job.showTests()
+    console.log(job.tests)
+    console.log("--------------------------------------------------------------------------------------------------")
+    console.log(job.builds)
     const end = new Date() - start;
-    console.info('Execution time in seconds: %ds', end/1000)
+    console.info('Execution time: %ds', end / 1000)
 }
+
 foo()
 
 
