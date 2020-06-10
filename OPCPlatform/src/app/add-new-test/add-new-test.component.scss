@@ -1,0 +1,93 @@
+// @import "compass/css3";
+
+ * { box-sizing: border-box; }
+ body{
+    font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+    color:black;
+    font-size:12px;
+    background:rgb(240, 243, 245) url(/images/classy_fabric.png);
+ }
+ h1 {
+    position: relative;;
+    font-size: 35px;
+    font-family: inherit;
+    color: midnightblue;
+    font-style: italic;
+    font-weight: inherit;
+    font-variant: inherit;
+    font-display: inherit;
+    text-align: center;
+}
+ .containor{
+    margin-top: 20px;
+    width:50%;
+    margin:30px auto;
+    /* border:solid rgb(22, 125, 194) 1px ; */
+    padding: 30px;
+    padding-right: 200px;
+ }
+ .containor p1 {
+     color: black;
+     font-size: 14px;
+
+ }
+
+ label {
+
+    font-weight: bold;
+    display: inline-block;
+    padding-bottom:9px;
+}
+
+input[type=text],
+textarea{
+    margin: f;
+     width:100%;
+  padding:6px 3px;
+  background:linear-gradient(white, #6f9ada);
+  border:1px solid #222;
+  border-radius:0.3em;
+
+}
+button[type=button]{
+    display: inline-block;
+      color:black;
+      background-color: #eee;
+      font-size: 12px;
+      padding: 7px 10px;
+      border-radius: 2px;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border: 1px solid rgba(0,0,0,0.3);
+    border-bottom-width: 3px;
+  }
+input[type=submit] {
+    text-align: center;
+    padding:5px 20px;
+    border:1px solid rgba(0,0,0,0.4);
+    text-shadow:0 -1px 0 rgba(0,0,0,0.4);
+    box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.3),
+    inset 0 10px 10px rgba(255,255,255,0.1);
+    border-radius:0.3em;
+    background: #6f9ada;
+    color:black;
+    float:right;
+    font-weight:bold;
+    cursor:pointer;
+    font-size:13px;
+    margin-top: 30px;
+    padding-top: 1px;
+}
+input[type=button]{
+
+    background-color:#6f9ada;
+    margin-top: 30px;
+    margin-left: 0px;
+    padding: 1px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+}
+button{
+    background:rgb(240, 243, 245) url(/images/classy_fabric.png);
+}
