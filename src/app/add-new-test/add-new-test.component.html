@@ -1,0 +1,55 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Test</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="containor">
+        <h1>Add New Test</h1>
+        <p><strong>Notice:</strong> Your test will be added to Tests Page.</p>
+        <div class="addingTest">
+            <p>
+                <label for="Category">Category</label>
+                <input type="text" name="Category" id="Category" required>
+            </p>
+            <p>
+                <label for="TestCase">Test Case</label>
+                <input type="text" name="TestCase" id="TestCase" required>
+            </p>
+            <p>
+                <label for="TestTitle">Test Title</label>
+                <input type="text" name="TestTitle" id="TestTitle" required>
+            </p>
+            <label for="symbol">Symbol</label>
+            <button style="font-size:24px"> <i class="material-icons">attachment</i></button>
+            <p>
+                <label for="TestSteps">Test Steps</label>
+                <input type="text" name="TestSteps" id="TestSteps" >
+                <p>
+                <button type="button">add step +</button> &nbsp;&nbsp;
+                <button type="button">remove step -</button></p>
+            <p>
+                <label for="TestData">Test Data</label>
+                <input type="text" name="TestData" id="TestData" >
+            </p>
+            <p>
+                <label for="ExpectedResult">Expected Result</label>
+                <input type="text" name="ExpectedResult" id="ExpectedResult" required>
+            </p>
+            <p>
+                <label for="TestSummary">Test Summary</label>
+                <br>
+                <textarea name="TestSummary" rows="3" cols="30"></textarea>
+            </p>
+            <p>
+                <label>Notes</label>
+                <br>
+                <textarea name="notes" rows="3" cols="30"></textarea>
+            </p>
+        <div class="submitTest">
+            <input type="submit" name="addTest" id="addTest" value="AddTest">
+        </div>
+    </div>
+    <div >
+        <input type="button" value="Go Back" onclick="history.go(-1)">
+    </div>

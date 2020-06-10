@@ -1,0 +1,45 @@
+<head>
+  <title>View Reports</title>
+</head>
+<body>
+  <div id='cssmenu'>
+      <ul>
+        <li><a routerLink="/home">Home</a></li>
+        <li><a routerLink="/allTest">All Tests</a></li>
+        <li><a routerLink="/runBuild">Run Build</a></li>
+        <li><a routerLink="/viewReports" routerLinkActive="active"></a></li>
+        <li><a routerLink="/users">Manage Users</a></li>
+        <li><a routerLink="/managereports">Manage Reports</a></li>
+      </ul>
+      </div>
+  <h1>View Reports</h1>
+  <br>
+  <label>Search report by:</label>
+  <select class="select-css" name="searchBy">
+      <option value="Build ID">Test Case</option>
+      <option value="Date">Date</option>
+      <option value="Kind">Test Title</option>
+  </select>
+  <input type="text" value="Enter search word">
+  <br>
+  <br>
+  <table class="table-fill">
+      <thead>
+      <tr>
+      <th class="text-left">Report ID</th>
+      <th class="text-left">Build ID</th>
+      <th class="text-left">Date</th>
+      <th class="text-left">Report Kind</th>
+      </tr>
+      </thead>
+      <tbody class="table-hover">
+      <tr>
+      <td class="text-left">2</td>
+      <td class="text-left">2</td>
+      <td class="text-left">20/04/2020</td>
+      <td class="text-left">Integrity Status</td>
+      </tr>
+      </table>
+      <p><strong>Notice:</strong> clicking on a report will open a report details window. </p>
+
+  </body>

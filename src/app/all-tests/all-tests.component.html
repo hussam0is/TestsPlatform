@@ -1,0 +1,62 @@
+<head>
+    <title>All Tests</title>
+</head>
+<body>
+    <div id='cssmenu'>
+        <ul>
+          <a routerLink="/allTest" routerLinkActive="active"></a>
+          <li><a routerLink="/home">Home</a></li>
+          <li><a routerLink="/runBuild">Run Build</a></li>
+          <li><a routerLink="/viewReports">Reports</a></li>
+          <li><a routerLink="/users">Manage Users</a></li>
+          <li><a routerLink="/managereports">Manage Reports</a></li>
+        </ul>
+        </div>
+    <h1>All Tests</h1>
+    <br>
+    <label>Search test by:</label>
+    <select class="select-css" name="searchBy">
+        <option value="case">Test Case</option>
+        <option value="title">Test Title</option>
+        <option value="category">Category</option>
+        <option value="summary">Test Summary</option>
+        <option value="id">Test ID</option>
+        <option value="successRates">Success Rates</option>
+    </select>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <label for="myfile">Upload excel tests file:</label>
+    <input type="file" id="excelFile" name="excelFile">
+    <div class="hot-container">
+        <br>
+        <li><a routerLink="/addTest">Add Test</a></li>
+    </div>
+    <br>
+    <br>
+    <table class="table-fill">
+        <thead>
+        <tr>
+        <th class="text-left">Test ID</th>
+        <th class="text-left">Test Case</th>
+        <th class="text-left">Test Title</th>
+        <th class="text-left">Category</th>
+        <th class="text-left">Test Summary</th>
+        <th class="text-left">Success Rates</th>
+        <th class="text-left">Group</th>
+        <th class="text-left">Notes</th>
+        </tr>
+        </thead>
+        <tbody class="table-hover">
+        <tr>
+        <td class="text-left">1</td>
+        <td class="text-left">#ACL1</td>
+        <td class="text-left">Objext1-Object2</td>
+        <td class="text-left">Integration test</td>
+        <td class="text-left">Adding Aggregation-Participation Link between two Objects</td>
+        <td class="text-left">43%</td>
+        <td class="text-left">2</td>
+        <td class="text-left"> </td>
+        </tr>
+        </tbody>
+        </table>
+        <p><strong>Notice:</strong> Double-clicking on a test row will open edit option. </p>
+
+</body>

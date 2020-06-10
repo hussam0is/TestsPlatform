@@ -1,0 +1,60 @@
+<title>OPCloud Software Integrity Management System</title>
+<body home>
+  <div id='cssmenu'>
+      <ul>
+        <a routerLink="/home" routerLinkActive="active"></a>
+        <li><a routerLink="/allTest">All Tests</a></li>
+        <li><a routerLink="/runBuild">Run Build</a></li>
+        <li><a routerLink="/viewReports">Reports</a></li>
+        <li><a routerLink="/users">Manage Users</a></li>
+        <li><a routerLink="/managereports">Manage Reports</a></li>
+      </ul>
+      </div>
+<h1>OPCloud Software Integrity Management System</h1>
+<div>
+  <br>
+  <label>Current Environment:</label>
+  <select  class="select-css" name="environment">
+      <option value="trunk">Trunk</option>
+      <option value="client">Client</option>
+      <option value="trail">Trail</option>
+  </select>
+  <br>
+  <label>Search Build by:</label>
+  <select class="select-css" name="searchBy">
+      <option value="buildId">Build ID</option>
+      <option value="status">Status</option>
+      <option value="date">Date</option>
+  </select>
+  <input type="text" value="Enter search word">
+  <button type="submit" onclick="searchBuildby()"><i class="fa fa-search"></i></button>
+  <br>
+  <div class="hot-container">
+      <br>
+           <li><a routerLink="/addEnvironment">Add New Enviroment</a></li>
+  </div>
+  <br>
+</div>
+<div>
+  <table>
+      <thead>
+      <tr>
+          <th>Build ID</th>
+          <th>Group</th>
+          <th>Status</th>
+          <th>Result (successful tests out of all tests)</th>
+          <th>Date</th>
+          <th>Start Time</th>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>1</td>
+          <td>passed</td>
+          <td>58/60</td>
+          <td>28/03/2020</td>
+          <td>10:45:44</td>
+      </tr>
+      </thead>
+  </table>
+</div>
+</body>

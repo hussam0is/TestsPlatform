@@ -1,0 +1,60 @@
+<head>
+    <title>Build Overview</title>
+</head>
+<body>
+    <div >
+        <button onclick="goBack()">Go Back</button>
+        <script>
+        function goBack() {
+        window.history.back();
+        }
+        </script>
+        <!-- <input type="button" value="Go Back" onclick="history.go(-1)"> -->
+    </div>
+    <h1>Build OverView</h1>
+    <br><br>
+    <label>Running environment:</label>
+    <select  class="select-css" name="environment">
+        <option value="trunk">Trunk</option>
+        <option value="client">Client</option>
+        <option value="trail">Trail</option>
+    </select>
+    <br>
+    <label>Report to:</label>
+    <select class="select-css" name="searchBy">
+        <option value="userId">User Id</option>
+        <option value="firstName">First Name</option>
+        <option value="lastName">Last Name</option>
+        <option value="email">Email Address</option>
+        <option value="userType">User Type</option>
+    </select>
+    <input type="text" value="Enter search word">
+    <br><br>
+    <label>The following tests will be run in this build:</label>
+    <table class="table-fill">
+        <thead>
+        <tr>
+        <th class="text-left">Test ID</th>
+        <th class="text-left">Test Case</th>
+        <th class="text-left">Test Title</th>
+        <th class="text-left">Category</th>
+        <th class="text-left">Test Summary</th>
+        <th class="text-left">Group</th>
+
+        </tr>
+        </thead>
+        <tbody class="table-hover">
+        <tr>
+        <td class="text-left">1</td>
+        <td class="text-left">#ACL1</td>
+        <td class="text-left">Objext1-Object2</td>
+        <td class="text-left">Integration test</td>
+        <td class="text-left">Adding Aggregation-Participation Link between two Objects</td>
+        <td class="text-left">1</td>
+        </tr>
+        </tbody>
+        </table>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button style="color: mediumseagreen;font-size: large;"> Accept and Run</button>
+        </body>

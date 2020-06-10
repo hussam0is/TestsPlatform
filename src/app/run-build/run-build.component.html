@@ -1,0 +1,67 @@
+<head>
+    <title>Run Build</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div id='cssmenu'>
+        <ul>
+          <li><a routerLink="/home">Home</a></li>
+          <li><a routerLink="/allTest">All Tests</a></li>
+          <a routerLink="/runBuild" routerLinkActive="active"></a>
+          <li><a routerLink="/viewReports">Reports</a></li>
+          <li><a routerLink="/users">Manage Users</a></li>
+          <li><a routerLink="/managereports">Manage Reports</a></li>
+        </ul>
+        </div>
+    <h1>Build Runner</h1>
+    <br>
+    <label>Search by build number:</label>
+    <input type="text" value="build number">
+    <a href="#" class="btn">show build's tests</a>
+    <br><br>
+    <label>Search test by:</label>
+    <select class="select-css" name="searchBy">
+        <option value="case">Test Case</option>
+        <option value="title">Test Title</option>
+        <option value="category">Category</option>
+        <option value="summary">Test Summary</option>
+        <option value="id">Test ID</option>
+    </select>
+    <input type="text" value="Enter search word">
+    <button type="submit"><i class="fa fa-search"></i></button>
+    <br>
+    <br>
+        <label>Choose group number:</label><input type="number" min="1" value="runbuild">
+        <button style="color:limegreen">run build</button>
+        <button style="color:red;" a routerLink="/buildStop">stop running</button>
+
+    <br>
+    <div style="text-align: right;">
+        <button type="button">select all</button>
+        <button type="button">unselect all</button> <br><br></div>
+    <div>
+    <br>
+    <br>
+    <table class="table-fill">
+        <thead>
+        <tr>
+        <th class="text-left">Test ID</th>
+        <th class="text-left">Test Case</th>
+        <th class="text-left">Test Title</th>
+        <th class="text-left">Category</th>
+        <th class="text-left">Test Summary</th>
+        <th class="text-left">Test Groub</th>
+        </tr>
+        </thead>
+        <tbody class="table-hover">
+        <tr>
+        <td class="text-left">1</td>
+        <td class="text-left">#ACL1</td>
+        <td class="text-left">Objext1-Object2</td>
+        <td class="text-left">Integration test</td>
+        <td class="text-left">Adding Aggregation-Participation Link between two Objects</td>
+        <td class="text-left">1</td>
+        </tr>
+        </table>
+        <p><strong>Notice:</strong> clicking on a test will select it. Another click will make it unselected. </p>
+

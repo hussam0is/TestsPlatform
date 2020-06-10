@@ -1,0 +1,32 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Enviorment</title>
+</head>
+<body>
+    <div class="containor">
+        <h1>Add New Environment</h1>
+        <p><strong>Notice:</strong> Your environment will be added to Home Page.</p>
+        <div class="adding">
+            <p>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required>
+            </p>
+            <p>
+                <label for="Connection Details">Connection Details</label>
+                <input type="url" name="Connection Details" id="Connection Details" required>
+            </p>
+            <p>
+                <label>Notes</label>
+                <br>
+                <textarea name="notes" rows="3" cols="30"></textarea>
+
+            </p>
+        <div class="submitEnviorment">
+            <input type="submit" name="add" id="add" value="Add Environment">
+        </div>
+
+    </div>
+    <div >
+        <!-- <button type="back" onclick="history.go(-1)"><i class="fa fa-arrow-left"></i></button> -->
+        <input type="button" value="Go Back" onclick="history.go(-1)">
+    </div>
